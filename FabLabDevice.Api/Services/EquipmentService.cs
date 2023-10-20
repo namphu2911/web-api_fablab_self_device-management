@@ -35,10 +35,16 @@ namespace FabLabDevice.Api.Services
         public async Task<bool> AddEquipment(CreateEquipmentViewModel viewModel)
         {
             var equipment = _mapper.Map<CreateEquipmentViewModel, Equipment>(viewModel);
-            equipment.Location = await _locationRepository.GetAsync(viewModel.LocationId) ?? throw new ResourceNotFoundException(nameof(Location), viewModel.LocationId);
-            equipment.Supplier = await _supplierRepository.GetAsync(viewModel.SupplierName) ?? throw new ResourceNotFoundException(nameof(Supplier), viewModel.SupplierName);
-            equipment.EquipmentType = await _equipmentTypeRepository.GetAsync(viewModel.EquipmentTypeId) ?? throw new ResourceNotFoundException(nameof(EquipmentType), viewModel.EquipmentId);
-            //equipment.AddNavigations(location, supplier, equipmentType);
+            var location = await _locationRepository.GetAsync(viewModel.LocationId) ?? throw new ResourceNotFoundException(nameof(Location), viewModel.LocationId);
+            var supplier = await _supplierRepository.GetAsync(viewModel.SupplierName) ?? throw new ResourceNotFoundException(nameof(Supplier), viewModel.SupplierName);
+            var equipmentType = await _equipmentTypeRepository.GetAsync(viewModel.EquipmentTypeId) ?? throw new ResourceNotFoundException(nameof(EquipmentType), viewModel.EquipmentId);
+
+
+            //equipment.Location = await _locationRepository.GetAsync(viewModel.LocationId) ?? throw new ResourceNotFoundException(nameof(Location), viewModel.LocationId);
+            //equipment.Supplier = await _supplierRepository.GetAsync(viewModel.SupplierName) ?? throw new ResourceNotFoundException(nameof(Supplier), viewModel.SupplierName);
+            //equipment.EquipmentType = await _equipmentTypeRepository.GetAsync(viewModel.EquipmentTypeId) ?? throw new ResourceNotFoundException(nameof(EquipmentType), viewModel.EquipmentId);
+
+            equipment.AddNavigations(location, supplier, equipmentType);
 
             await _equipmentRepository.AddAsync(equipment);
 

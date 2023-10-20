@@ -12,11 +12,11 @@
         public List<Borrow_Equipment>? BorrowEquipments { get; private set; }
         //
         public string LocationId { get; private set; }
-        public Location Location { get; set; }
+        public Location Location { get; private set; }
         public string SupplierName { get; private set; }
-        public Supplier Supplier { get; set; }
+        public Supplier Supplier { get; private set; }
         public string EquipmentTypeId { get; private set; }
-        public EquipmentType EquipmentType { get; set; }
+        public EquipmentType EquipmentType { get; private set; }
 
 #pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider declaring as nullable.
         public Equipment() { }
