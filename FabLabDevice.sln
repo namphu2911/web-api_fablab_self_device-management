@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FabLabDevice.Api", "FabLabDevice.Api\FabLabDevice.Api.csproj", "{4F23A2FB-8CFD-4A5B-B9A2-978A8E7F1225}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4F23A2FB-8CFD-4A5B-B9A2-978A8E7F1225}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F23A2FB-8CFD-4A5B-B9A2-978A8E7F1225}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F23A2FB-8CFD-4A5B-B9A2-978A8E7F1225}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F23A2FB-8CFD-4A5B-B9A2-978A8E7F1225}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7362CA26-2754-457E-88B4-F024E9F66CDD}
+	EndGlobalSection
+EndGlobal
